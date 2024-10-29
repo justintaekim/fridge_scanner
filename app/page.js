@@ -6,7 +6,8 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8 text-center">
       <h1 className="text-3xl font-bold mb-4">Fridge Ingredient Detection</h1>
       <p className="mb-6">
-        Upload a picture of your fridge, and we’ll detect the ingredients!
+        Upload a picture of your fridge, and we’ll detect the ingredients for
+        you!
       </p>
       <Link
         href="/upload"
