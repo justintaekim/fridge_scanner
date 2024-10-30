@@ -22,8 +22,9 @@ const UploadImage = () => {
 
   // Form submission
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
+    // Error handling
     if (!selectedFile) {
       setError("No file selected.");
       console.error("No file selected");
@@ -35,7 +36,7 @@ const UploadImage = () => {
       const reader = new FileReader();
       reader.readAsDataURL(selectedFile);
       reader.onloadend = async () => {
-        const base64Image = reader.result.split(",")[1]; // Remove data:image/jpeg;base64, part
+        const base64Image = reader.result.split(",")[1];
 
         // Send the image data to the backend API
         const response = await fetch("/api/recognize", {
@@ -47,12 +48,11 @@ const UploadImage = () => {
         });
 
         const data = await response.json();
-        console.log("Detected Ingredients:", data);
+        console.log("Detected Ingredients:", data); // Debugging purposes
 
         if (data && data.data) {
-          // Store data in localStorage
-          localStorage.setItem("detectedItems", JSON.stringify(data.data));
-          router.push("/results"); // Navigate to results page
+          localStorage.setItem("detectedItems", JSON.stringify(data.data)); // Store data in localStorage
+          router.push("/results"); // Nav to results page
         } else {
           console.error("No data received from API");
           setError("No data found. Please try again.");

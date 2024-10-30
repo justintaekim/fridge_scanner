@@ -6,10 +6,10 @@ export default function Home() {
     <main className="flex items-center justify-center h-screen">
       <div className="text-center">
         <Image
-          src="/fridge-ai.png" // Replace with your image path
+          src="/fridge-ai.png"
           alt="Fridge Ingredient Detection Logo"
-          width={700} // Adjust width as needed
-          height={500} // Adjust height as needed
+          width={700}
+          height={500}
           className="mx-auto"
         />
         <h1 className="text-3xl font-bold mb-4">Fridge Ingredient Detection</h1>

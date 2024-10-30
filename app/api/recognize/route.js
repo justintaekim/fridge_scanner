@@ -11,18 +11,18 @@ const rekognition = new AWS.Rekognition();
 
 export async function POST(req) {
   // Get the base64 image data from the request body
-  const { imageUrl } = await req.json(); // Expecting a base64 image string
+  const { imageUrl } = await req.json();
 
-  // Decode the base64 image data for Rekognition
+  // Decode the base64 image data
   const buffer = Buffer.from(imageUrl, "base64");
 
-  // Parameters for AWS Rekognition's detectLabels API
+  // Configure params for AWS Rekognition
   const params = {
     Image: {
       Bytes: buffer,
     },
     MaxLabels: 20, // Max number of labels to return
-    MinConfidence: 95, // Minimum confidence level
+    MinConfidence: 90, // Minimum confidence level
   };
 
   try {
@@ -32,6 +32,7 @@ export async function POST(req) {
       status: 200,
     });
   } catch (error) {
+    // Error catching
     console.error("Error with AWS Rekognition:", error);
     return new Response(JSON.stringify({ error: "AWS Rekognition error" }), {
       status: 500,
