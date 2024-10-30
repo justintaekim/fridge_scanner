@@ -22,7 +22,7 @@ const UploadImage = () => {
 
   // Form submission
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     // Error handling
     if (!selectedFile) {

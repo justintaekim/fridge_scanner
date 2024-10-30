@@ -1,3 +1,4 @@
+"use client";
 import UploadImage from "../components/UploadImage";
 import Image from "next/image";
 
@@ -11,6 +12,7 @@ export default function UploadPage() {
           width={700}
           height={500}
           className="mx-auto"
+          priority
         />
         <h1 className="text-2xl font-bold mb-6">
           Upload an Image to Detect Ingredients

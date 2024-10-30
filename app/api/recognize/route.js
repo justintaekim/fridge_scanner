@@ -22,7 +22,7 @@ export async function POST(req) {
       Bytes: buffer,
     },
     MaxLabels: 20, // Max number of labels to return
-    MinConfidence: 90, // Minimum confidence level
+    MinConfidence: 70, // Minimum confidence level
   };
 
   try {
@@ -31,6 +31,11 @@ export async function POST(req) {
     return new Response(JSON.stringify({ data: response.Labels }), {
       status: 200,
     });
+    // const response = await rekognition.detectLabels(params).promise();
+    // const foodLabels = response.Labels.filter((label) => label.Name === "Food");
+    // return new Response(JSON.stringify({ data: foodLabels }), {
+    //   status: 200,
+    // });
   } catch (error) {
     // Error catching
     console.error("Error with AWS Rekognition:", error);

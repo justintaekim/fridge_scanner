@@ -11,6 +11,7 @@ export default function Home() {
           width={700}
           height={500}
           className="mx-auto"
+          priority
         />
         <h1 className="text-3xl font-bold mb-4">Fridge Ingredient Detection</h1>
         <p className="mb-6">

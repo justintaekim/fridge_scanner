@@ -22,6 +22,7 @@ export default function Results() {
           width={700}
           height={500}
           className="mx-auto"
+          priority
         />
         <h1 className="text-2xl font-bold mb-4">Detected Ingredients</h1>
         {items.length > 0 ? (
