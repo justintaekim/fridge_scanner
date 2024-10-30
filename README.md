@@ -21,13 +21,13 @@ For ingredient detection, the app utilizes **Amazon Rekognition** to analyze the
 
 ## Description
 
-The tech stacks were chosen based on the benefits including scalability, ease of cost management, security, reliability, and developer support. AI is levereged in the image classification where it uses ML to identify object.
+The tech stacks were chosen based on the benefits including scalability, ease of cost management, security, reliability, and developer support. AI is levereged in the image classification where it uses ML to identify objects.
 
-Some of the challenges that were faced during the project were minor syntax errors and compile errors such as hydration mismatch while integrating AWS Rekognition, which took up a lot of time then I expected. It was a learning process and took a lot of searching and reading though developer forums.
+Some of the challenges that were faced during the project were minor syntax errors and compile errors such as hydration mismatch while integrating AWS Rekognition, which took up a lot of time than I expected. It was a learning process and took a lot of searching and reading through developer forums.
 
 ## Future Approach
 
-With given more time, here are the things I would work on.
+Here is the list of things I will work on.
 
 - Train the model on AWS Rekognition to detect items or leverage pre-existing other food scan API's like Foodvisor API / Clarifai API that provices pre-trained models to detect items
 
