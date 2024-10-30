@@ -66,7 +66,7 @@ const UploadImage = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <form onSubmit={handleSubmit} className="w-full max-w-md">
+      <form onSubmit={handleSubmit} className="w-80 max-w-md">
         <input
           type="file"
           accept="image/*"
